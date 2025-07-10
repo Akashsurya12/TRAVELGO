@@ -11,7 +11,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key_here' # IMPORTANT: Change this to a strong, random key in production!
 
 # AWS Setup using IAM Role
-REGION = 'ap-south-1'  # Replace with your actual AWS region
+REGION = 'us-east-1'  # Replace with your actual AWS region
 dynamodb = boto3.resource('dynamodb', region_name=REGION)
 sns_client = boto3.client('sns', region_name=REGION)
 
@@ -19,7 +19,7 @@ users_table = dynamodb.Table('travelgo_users')
 trains_table = dynamodb.Table('trains') # Note: This table is declared but not used in the provided routes.
 bookings_table = dynamodb.Table('bookings')
 
-SNS_TOPIC_ARN = 'arn:aws:sns:ap-south-1:353250843450:TravelGoBookingTopic'  # Replace with actual SNS topic ARN
+SNS_TOPIC_ARN = 'arn:aws:sns:us-east-1:975050316116:Travelgo2:8a1f9de7-cc64-416d-a057-d72586c9d032'  # Replace with actual SNS topic ARN
 
 # Function to send SNS notifications
 # This function is duplicated in the original code, removing the duplicate.
