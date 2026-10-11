@@ -5,197 +5,199 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hotel Booking - TravelGo</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #eef5ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f3f8ff;
       margin: 0;
       padding: 0;
+      color: #333;
     }
 
-    /* Navbar */
-    nav {
+    header {
       background-color: #004aad;
-      padding: 15px 30px;
+      color: white;
+      padding: 20px 40px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
+      align-items: center;
     }
 
-    .navbar-brand {
+    header h1 {
       font-size: 26px;
-      font-weight: bold;
+      margin: 0;
+    }
+
+    header nav a {
       color: white;
       text-decoration: none;
-    }
-
-    .nav-links a {
-      color: white;
       margin-left: 20px;
       font-weight: 500;
-      text-decoration: none;
       transition: color 0.3s;
     }
 
-    .nav-links a:hover {
+    header nav a:hover {
       color: #ffdd57;
     }
 
     .container {
-      max-width: 1150px;
+      max-width: 1100px;
       margin: 40px auto;
       padding: 30px;
       background: white;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
 
     h2 {
       color: #004aad;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       text-align: center;
+      font-weight: 600;
     }
 
     .form-row, .filters, .sort-row {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
-      justify-content: space-between;
       margin-bottom: 20px;
+      align-items: center;
     }
 
     select, input[type="date"], input[type="number"] {
       flex: 1 1 160px;
-      padding: 12px;
+      padding: 10px 14px;
       border: 2px solid #ccc;
       border-radius: 8px;
-      font-size: 16px;
+      font-size: 15px;
     }
 
     .search-btn {
       background-color: #004aad;
       color: white;
-      padding: 12px 24px;
+      padding: 10px 24px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
       font-weight: bold;
+      font-size: 16px;
       transition: background 0.3s;
     }
 
     .search-btn:hover {
-      background-color: #003380;
+      background-color: #00307c;
     }
 
     .filters label {
-      background: #e4edff;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-size: 15px;
+      background: #e6f0ff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14px;
       cursor: pointer;
       display: flex;
       align-items: center;
-    }
-
-    .filters input {
-      margin-right: 6px;
+      gap: 6px;
     }
 
     .sort-row label {
-      font-weight: 600;
-      align-self: center;
-    }
-
-    .hotel-list {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
+      font-weight: 500;
+      color: #555;
     }
 
     .hotel-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #f9fbff;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
-      background: #fdfdff;
-      border: 1px solid #d2e3ff;
-      padding: 18px 24px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
 
-    .hotel-card strong {
-      font-size: 18px;
+    .hotel-info {
+      flex: 3;
+      min-width: 260px;
+    }
+
+    .hotel-info h4 {
+      margin: 0 0 6px 0;
       color: #004aad;
     }
 
-    .hotel-card p {
-      margin: 6px 0;
+    .hotel-info p {
+      margin: 3px 0;
       color: #555;
-      font-size: 15px;
+      font-size: 14px;
+    }
+
+    .hotel-actions {
+      flex: 1;
+      text-align: right;
+      min-width: 150px;
+    }
+
+    .hotel-price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #28a745;
+      margin-bottom: 8px;
     }
 
     .book-btn {
-      background: #00a36c;
+      background-color: #28a745;
       color: white;
-      padding: 10px 20px;
-      font-weight: 600;
+      padding: 10px 22px;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       cursor: pointer;
-      transition: background 0.3s;
+      font-weight: 600;
+      font-size: 15px;
+      transition: background-color 0.2s;
     }
 
     .book-btn:hover {
-      background: #00814f;
+      background-color: #218838;
     }
 
-    @media (max-width: 768px) {
-      .form-row, .filters, .sort-row {
-        flex-direction: column;
-      }
-
-      .hotel-card {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .book-btn {
-        margin-top: 12px;
-        width: 100%;
-      }
+    .no-results {
+      text-align: center;
+      color: #666;
+      padding: 30px;
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
 
-<!-- Navigation -->
-<nav>
-  <a class="navbar-brand" href="#">TravelGo</a>
-  <div class="nav-links">
+<header>
+  <h1>TravelGo</h1>
+  <nav>
     <a href="/">Home</a>
     <a href="/dashboard">Dashboard</a>
-    <a href="/hotel">Hotels</a>
-  </div>
-</nav>
+    <a href="/logout">Logout</a>
+  </nav>
+</header>
 
-<!-- Hotel Booking Section -->
 <div class="container">
   <h2>🏨 Book Your Perfect Stay</h2>
 
   <div class="form-row">
-    <select id="location">
+    <select id="location" required>
       <option value="">Select City</option>
       <option value="Hyderabad">Hyderabad</option>
       <option value="Mumbai">Mumbai</option>
       <option value="Delhi">Delhi</option>
       <option value="Bangalore">Bangalore</option>
     </select>
-    <input type="date" id="checkinDate" />
-    <input type="date" id="checkoutDate" />
-    <input type="number" id="numRooms" min="1" value="1" placeholder="No. of Rooms" />
-    <input type="number" id="numGuests" min="1" value="1" placeholder="No. of Guests" />
-    <button id="search-btn" class="search-btn">Search</button>
+    <input type="date" id="checkinDate" required />
+    <input type="date" id="checkoutDate" required />
+    <input type="number" id="numRooms" min="1" value="1" placeholder="No. of Rooms" required />
+    <input type="number" id="numGuests" min="1" value="1" placeholder="No. of Guests" required />
+    <button id="search-btn" class="search-btn">Search Hotels</button>
   </div>
 
   <div class="filters">
@@ -209,27 +211,31 @@
 
   <div class="sort-row">
     <label for="sort">Sort by:</label>
-    <select id="sort">
-      <option value="">None</option>
+    <select id="sort" style="flex: 0 1 200px;">
+      <option value="">Recommended</option>
       <option value="price-low">Price: Low to High</option>
       <option value="price-high">Price: High to Low</option>
       <option value="rating-high">Rating: High to Low</option>
     </select>
   </div>
 
-  <div id="hotel-list" class="hotel-list"></div>
+  <div id="hotel-list"></div>
 </div>
 
-<!-- JavaScript -->
 <script>
   const hotels = [
-    { name: "Taj Falaknuma Palace", location: "Hyderabad", pricePerNight: 25000, rating: 5, amenities: ["WiFi", "Pool", "Parking", "Restaurant"] },
-    { name: "The Park", location: "Hyderabad", pricePerNight: 5500, rating: 3, amenities: ["WiFi"] },
-    { name: "ITC Grand Central", location: "Mumbai", pricePerNight: 12000, rating: 5, amenities: ["WiFi", "Pool", "Parking", "Spa"] },
-    { name: "The Leela Palace", location: "Delhi", pricePerNight: 15000, rating: 5, amenities: ["WiFi", "Pool", "Parking", "Restaurant"] },
-    { name: "Ginger Hotel", location: "Mumbai", pricePerNight: 3000, rating: 3, amenities: ["WiFi", "Restaurant"] },
-    { name: "Oberoi", location: "Delhi", pricePerNight: 8000, rating: 4, amenities: ["WiFi", "Spa"] },
-    { name: "Hilton", location: "Bangalore", pricePerNight: 9000, rating: 5, amenities: ["WiFi", "Gym"] }
+    { id: 1, name: "Taj Falaknuma Palace", location: "Hyderabad", pricePerNight: 25000, rating: 5, amenities: ["WiFi", "Pool", "Parking", "Restaurant"] },
+    { id: 2, name: "The Park Hotel", location: "Hyderabad", pricePerNight: 5500, rating: 4, amenities: ["WiFi", "Pool", "Restaurant"] },
+    { id: 3, name: "ITC Kakatiya", location: "Hyderabad", pricePerNight: 8500, rating: 5, amenities: ["WiFi", "Pool", "Parking", "Spa"] },
+    { id: 4, name: "Lemon Tree Premier", location: "Hyderabad", pricePerNight: 4200, rating: 3, amenities: ["WiFi", "Parking"] },
+    { id: 5, name: "ITC Grand Central", location: "Mumbai", pricePerNight: 12000, rating: 5, amenities: ["WiFi", "Pool", "Parking", "Spa"] },
+    { id: 6, name: "Taj Mahal Palace", location: "Mumbai", pricePerNight: 28000, rating: 5, amenities: ["WiFi", "Pool", "Parking", "Restaurant"] },
+    { id: 7, name: "Ginger Hotel", location: "Mumbai", pricePerNight: 3000, rating: 3, amenities: ["WiFi", "Restaurant"] },
+    { id: 8, name: "The Leela Palace", location: "Delhi", pricePerNight: 15000, rating: 5, amenities: ["WiFi", "Pool", "Parking", "Restaurant"] },
+    { id: 9, name: "The Oberoi", location: "Delhi", pricePerNight: 18000, rating: 5, amenities: ["WiFi", "Pool", "Parking", "Spa"] },
+    { id: 10, name: "Hotel City Star", location: "Delhi", pricePerNight: 2800, rating: 3, amenities: ["WiFi"] },
+    { id: 11, name: "Hilton Bangalore", location: "Bangalore", pricePerNight: 9000, rating: 5, amenities: ["WiFi", "Pool", "Parking", "Gym"] },
+    { id: 12, name: "The Chancery Pavilion", location: "Bangalore", pricePerNight: 4800, rating: 4, amenities: ["WiFi", "Pool", "Restaurant"] }
   ];
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -243,14 +249,19 @@
     const location = document.getElementById("location").value;
     const checkinDate = document.getElementById("checkinDate").value;
     const checkoutDate = document.getElementById("checkoutDate").value;
-    const numRooms = parseInt(document.getElementById("numRooms").value);
-    const numGuests = parseInt(document.getElementById("numGuests").value);
+    const numRooms = parseInt(document.getElementById("numRooms").value) || 1;
+    const numGuests = parseInt(document.getElementById("numGuests").value) || 1;
     const sort = document.getElementById("sort").value;
     const list = document.getElementById("hotel-list");
     list.innerHTML = "";
 
-    if (!location || !checkinDate || !checkoutDate || checkoutDate <= checkinDate) {
-      alert("Please select valid location and dates.");
+    if (!location) {
+      alert("Please select a city.");
+      return;
+    }
+
+    if (!checkinDate || !checkoutDate || checkoutDate <= checkinDate) {
+      alert("Please select valid check-in and check-out dates (check-out must be after check-in).");
       return;
     }
 
@@ -264,8 +275,8 @@
     };
 
     let filtered = hotels.filter(h =>
-      h.location === location &&
-      (Object.values(filters).every(v => !v) ||
+      h.location.toLowerCase() === location.toLowerCase() &&
+      (!filters.fiveStar && !filters.fourStar && !filters.threeStar ||
         (filters.fiveStar && h.rating === 5) ||
         (filters.fourStar && h.rating === 4) ||
         (filters.threeStar && h.rating === 3)) &&
@@ -279,26 +290,38 @@
     else if (sort === "rating-high") filtered.sort((a, b) => b.rating - a.rating);
 
     if (filtered.length === 0) {
-      list.innerHTML = "<p>No hotels found for this location and filters.</p>";
+      list.innerHTML = "<p class='no-results'>No hotels found matching your criteria. Try adjusting the filters or dates.</p>";
       return;
     }
 
+    const ci = new Date(checkinDate);
+    const co = new Date(checkoutDate);
+    const nights = Math.max(1, Math.round((co - ci) / (1000 * 60 * 60 * 24)));
+
     filtered.forEach(hotel => {
+      const totalCost = hotel.pricePerNight * numRooms * nights;
       const card = document.createElement("div");
       card.className = "hotel-card";
       card.innerHTML = `
-        <div>
-          <strong>${hotel.name}</strong>
-          <p>${hotel.location} • ${hotel.rating}-Star • ₹${hotel.pricePerNight}/night</p>
-          <p><em>Amenities:</em> ${hotel.amenities.join(', ')}</p>
+        <div class="hotel-info">
+          <h4>${hotel.name}</h4>
+          <p><strong>Location:</strong> ${hotel.location} | <strong>Rating:</strong> ${'★'.repeat(hotel.rating)} (${hotel.rating}-Star)</p>
+          <p><strong>Dates:</strong> ${checkinDate} to ${checkoutDate} (${nights} night${nights > 1 ? 's' : ''})</p>
+          <p><strong>Amenities:</strong> ${hotel.amenities.join(', ')}</p>
+          <p><strong>Rate:</strong> ₹${hotel.pricePerNight}/night</p>
         </div>
-        <button class="book-btn" onclick='bookHotel(${JSON.stringify(hotel)}, "${checkinDate}", "${checkoutDate}", ${numRooms}, ${numGuests})'>Book</button>
+        <div class="hotel-actions">
+          <div class="hotel-price">Total: ₹${totalCost}</div>
+          <button class="book-btn" onclick="bookHotel(${hotel.id}, '${checkinDate}', '${checkoutDate}', ${numRooms}, ${numGuests})">Book Now</button>
+        </div>
       `;
       list.appendChild(card);
     });
   });
 
-  function bookHotel(hotel, checkin, checkout, rooms, guests) {
+  function bookHotel(hotelId, checkin, checkout, rooms, guests) {
+    const hotel = hotels.find(h => h.id === hotelId);
+    if (!hotel) return;
     const params = new URLSearchParams({
       name: hotel.name,
       location: hotel.location,

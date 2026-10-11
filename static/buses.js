@@ -1,5 +1,7 @@
 const buses = [
   {
+    id: "BUS_01",
+    _id: "BUS_01",
     source: "Hyderabad",
     destination: "Bangalore",
     name: "Rajdhani Express",
@@ -8,6 +10,8 @@ const buses = [
     price: 850
   },
   {
+    id: "BUS_02",
+    _id: "BUS_02",
     source: "Hyderabad",
     destination: "Bangalore",
     name: "VRL Travels",
@@ -16,6 +20,8 @@ const buses = [
     price: 620
   },
   {
+    id: "BUS_03",
+    _id: "BUS_03",
     source: "Hyderabad",
     destination: "Bangalore",
     name: "Orange Travels",
@@ -24,6 +30,8 @@ const buses = [
     price: 780
   },
   {
+    id: "BUS_04",
+    _id: "BUS_04",
     source: "Hyderabad",
     destination: "Bangalore",
     name: "Kaveri Travels",
@@ -32,6 +40,8 @@ const buses = [
     price: 700
   },
   {
+    id: "BUS_05",
+    _id: "BUS_05",
     source: "Hyderabad",
     destination: "Bangalore",
     name: "TSRTC",
@@ -40,6 +50,8 @@ const buses = [
     price: 900
   },
   {
+    id: "BUS_06",
+    _id: "BUS_06",
     source: "Hyderabad",
     destination: "Bangalore",
     name: "SRS Travels",
@@ -48,6 +60,8 @@ const buses = [
     price: 610
   },
   {
+    id: "BUS_07",
+    _id: "BUS_07",
     source: "Bangalore",
     destination: "Chennai",
     name: "SRS Travels",
@@ -56,6 +70,8 @@ const buses = [
     price: 700
   },
   {
+    id: "BUS_08",
+    _id: "BUS_08",
     source: "Bangalore",
     destination: "Chennai",
     name: "KPN Travels",
@@ -64,6 +80,8 @@ const buses = [
     price: 580
   },
   {
+    id: "BUS_09",
+    _id: "BUS_09",
     source: "Bangalore",
     destination: "Chennai",
     name: "GreenLine",
@@ -72,6 +90,8 @@ const buses = [
     price: 640
   },
   {
+    id: "BUS_10",
+    _id: "BUS_10",
     source: "Bangalore",
     destination: "Chennai",
     name: "TSRTC",
@@ -80,6 +100,8 @@ const buses = [
     price: 750
   },
   {
+    id: "BUS_11",
+    _id: "BUS_11",
     source: "Bangalore",
     destination: "Chennai",
     name: "Orange Travels",
@@ -88,6 +110,8 @@ const buses = [
     price: 600
   },
   {
+    id: "BUS_12",
+    _id: "BUS_12",
     source: "Bangalore",
     destination: "Chennai",
     name: "Raj Express",
@@ -96,6 +120,8 @@ const buses = [
     price: 720
   },
   {
+    id: "BUS_13",
+    _id: "BUS_13",
     source: "Chennai",
     destination: "Hyderabad",
     name: "TSRTC",
@@ -104,6 +130,8 @@ const buses = [
     price: 810
   },
   {
+    id: "BUS_14",
+    _id: "BUS_14",
     source: "Chennai",
     destination: "Hyderabad",
     name: "GreenLine",
@@ -112,6 +140,8 @@ const buses = [
     price: 760
   },
   {
+    id: "BUS_15",
+    _id: "BUS_15",
     source: "Chennai",
     destination: "Hyderabad",
     name: "KPN Travels",
@@ -120,6 +150,8 @@ const buses = [
     price: 700
   },
   {
+    id: "BUS_16",
+    _id: "BUS_16",
     source: "Chennai",
     destination: "Hyderabad",
     name: "Orange Travels",
@@ -128,6 +160,8 @@ const buses = [
     price: 680
   },
   {
+    id: "BUS_17",
+    _id: "BUS_17",
     source: "Chennai",
     destination: "Hyderabad",
     name: "VRL",
@@ -136,6 +170,8 @@ const buses = [
     price: 790
   },
   {
+    id: "BUS_18",
+    _id: "BUS_18",
     source: "Chennai",
     destination: "Hyderabad",
     name: "Raj Express",
@@ -144,6 +180,8 @@ const buses = [
     price: 740
   },
   {
+    id: "BUS_19",
+    _id: "BUS_19",
     source: "Hyderabad",
     destination: "Chennai",
     name: "Orange Travels",
@@ -152,6 +190,8 @@ const buses = [
     price: 630
   },
   {
+    id: "BUS_20",
+    _id: "BUS_20",
     source: "Hyderabad",
     destination: "Chennai",
     name: "KKR Travels",
@@ -160,6 +200,8 @@ const buses = [
     price: 820
   },
   {
+    id: "BUS_21",
+    _id: "BUS_21",
     source: "Hyderabad",
     destination: "Chennai",
     name: "SRS Travels",
@@ -168,6 +210,8 @@ const buses = [
     price: 700
   },
   {
+    id: "BUS_22",
+    _id: "BUS_22",
     source: "Hyderabad",
     destination: "Chennai",
     name: "TSRTC",
@@ -176,6 +220,8 @@ const buses = [
     price: 780
   },
   {
+    id: "BUS_23",
+    _id: "BUS_23",
     source: "Hyderabad",
     destination: "Chennai",
     name: "VRL",
@@ -184,6 +230,8 @@ const buses = [
     price: 650
   },
   {
+    id: "BUS_24",
+    _id: "BUS_24",
     source: "Hyderabad",
     destination: "Chennai",
     name: "Raj Express",
@@ -192,6 +240,8 @@ const buses = [
     price: 830
   },
   {
+    id: "BUS_25",
+    _id: "BUS_25",
     source: "Bangalore",
     destination: "Hyderabad",
     name: "Sri Balaji",
@@ -200,6 +250,8 @@ const buses = [
     price: 870
   },
   {
+    id: "BUS_26",
+    _id: "BUS_26",
     source: "Bangalore",
     destination: "Hyderabad",
     name: "Kaveri Travels",
@@ -208,6 +260,8 @@ const buses = [
     price: 590
   },
   {
+    id: "BUS_27",
+    _id: "BUS_27",
     source: "Bangalore",
     destination: "Hyderabad",
     name: "TSRTC",
@@ -216,6 +270,8 @@ const buses = [
     price: 710
   },
   {
+    id: "BUS_28",
+    _id: "BUS_28",
     source: "Bangalore",
     destination: "Hyderabad",
     name: "GreenLine",
@@ -224,6 +280,8 @@ const buses = [
     price: 765
   },
   {
+    id: "BUS_29",
+    _id: "BUS_29",
     source: "Bangalore",
     destination: "Hyderabad",
     name: "Orange Travels",
@@ -232,6 +290,8 @@ const buses = [
     price: 880
   },
   {
+    id: "BUS_30",
+    _id: "BUS_30",
     source: "Bangalore",
     destination: "Hyderabad",
     name: "KKR Travels",
